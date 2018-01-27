@@ -11,9 +11,8 @@ const solution = (a, b, c) => {
     return b;
   } else if (a > b && a > c) {
     return a;
-  } else {
-    return c;
   }
+  return c;
 }
 
 module.exports = {
