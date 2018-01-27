@@ -7,8 +7,14 @@
  */
 
 const solution = (a, b, c) => {
-  return Math.max(...[a,b,c]);
-};
+  if (b > a && b > c) {
+    return b;
+  } else if (a > b && a > c) {
+    return a;
+  } else {
+    return c;
+  }
+}
 
 module.exports = {
   solution,
