@@ -7,7 +7,11 @@
  */
 
 const solution = (a, b) => {
-  return 0;
+  const arr = []
+  for (let i = 0; i < a; i++) {
+    arr.push(b);
+  }
+  return arr.join("");
 };
 
 module.exports = {
