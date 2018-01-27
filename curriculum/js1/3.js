@@ -5,8 +5,12 @@
  * @returns {string}
  */
 
-const solution = (a, b) => {
-  return 0;
+const solution = (a,b) => {
+  var arr = [];
+  for (let i = 0; i < a; i++) {
+    arr.push("hello");
+  }
+  return arr.join("");
 };
 
 module.exports = {
