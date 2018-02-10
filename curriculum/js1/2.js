@@ -7,8 +7,14 @@
  */
 
 const solution = (a, b, c) => {
-  return 0;
-};
+  if (b > a && b > c) {
+    return b;
+  }
+  if (a > b && a > c) {
+    return a;
+  }
+  return c;
+}
 
 module.exports = {
   solution,
