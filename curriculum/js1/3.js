@@ -5,14 +5,11 @@
  * @returns {string}
  */
 
-const solution = (a,b) => {
-  var arr = [];
-  for (let i = 0; i < a; i++) {
-    arr.push("hello");
-  }
-  return arr.join("");
-};
+const solution = (a,result='') => {
+  if (a === 0) return result;
+  return solution(a-1, result += 'hello')
+}
 
 module.exports = {
   solution,
-};
+}
