@@ -6,13 +6,10 @@
  * @returns {string}
  */
 
-const solution = (a, b) => {
-  const arr = []
-  for (let i = 0; i < a; i++) {
-    arr.push(b);
-  }
-  return arr.join("");
-};
+const solution = (a, b, result="") => {
+  if (a === 0) { return result }
+  return solution(a-1, b, result+=b)
+}
 
 module.exports = {
   solution,
