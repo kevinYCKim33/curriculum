@@ -9,7 +9,8 @@
 const solution = (a, b, c) => {
   if (b > a && b > c) {
     return b;
-  } else if (a > b && a > c) {
+  }
+  if (a > b && a > c) {
     return a;
   }
   return c;
