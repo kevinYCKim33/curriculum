@@ -7,12 +7,10 @@
  * @param {function} c
  */
 
- const solution = (a, b, c) => {
-   setTimeout(function(){
-     c();
-     setTimeout(function(){
-       c();
-     }, b)
+ const solution = (a,b,c) => {
+   setTimeout(() => {
+     c;
+     setTimeout(c, b)
    }, a)
  }
 
