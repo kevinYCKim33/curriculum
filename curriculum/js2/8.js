@@ -3,13 +3,20 @@
  * @returns {[]}
  */
 
-const solution = () => {
-  Array.prototype.gsMap = function () {
-    // To get the actual array, use this
-    return [];
-  };
-};
+ const solution = () => {
+   Array.prototype.gsMap = function (cb) {
+     const newArr = [];
+     for (let i = 0; i < this.length; i++) {
+       newArr.push(cb(this[i]));
+     }
+     return newArr;
+   };
+ };
 
-module.exports = {
-  solution,
-};
+ module.exports = {
+   solution,
+ };
+
+ // arr.gsMap(function(num) {
+ //   return num * 2;
+ // });
