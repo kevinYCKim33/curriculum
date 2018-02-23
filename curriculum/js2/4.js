@@ -5,7 +5,11 @@
  */
 
 const solution = (a) => {
-  return 0;
+  if (a.length === 0) { return '' }
+  
+  return a.reduce((acc, num) => {
+    return acc + num;
+  }, 0)
 };
 
 module.exports = {
