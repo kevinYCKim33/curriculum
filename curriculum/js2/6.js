@@ -5,7 +5,7 @@
  */
 
 const solution = (a) => {
-  return [];
+  return a.filter(num => num > 5);
 };
 
 module.exports = {
