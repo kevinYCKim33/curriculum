@@ -4,19 +4,21 @@
  */
 
  const solution = () => {
-   Array.prototype.gsMap = function (cb) {
-     const newArr = [];
-     for (let i = 0; i < this.length; i++) {
-       newArr.push(cb(this[i]));
-     }
-     return newArr;
+   Array.prototype.gsMap = function (cb, res = []) {
+     if (res.length === this.length) return res;
+     res.push(cb(this[res.length]));
+     return this.gsMap(cb, res);
    };
  };
+
+ // const solution = () => {
+ //   Array.prototype.gsMap = function (cb) {
+ //     for (let i = 0; i < this.length; i++) {
+ //       this[i] = cb(this[i]);
+ //     }
+ //   }
+ // }
 
  module.exports = {
    solution,
  };
-
- // arr.gsMap(function(num) {
- //   return num * 2;
- // });
