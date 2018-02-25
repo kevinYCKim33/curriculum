@@ -4,13 +4,7 @@
  * @param {array} a
  * @returns {array}
  */
-
-const isPrime = (num, counter=2) => {
-   if (num <= 1) { return false }
-   if (num === counter) { return true }
-   if (num % counter === 0) { return false }
-   return isPrime(num, counter + 1);
- };
+const isPrime = require('../js1/7.js').solution;
 
 const solution = (a) => {
   return a.map((num) => {
