@@ -4,6 +4,11 @@
  * @param {array} a
  * @returns {array}
  */
+
+//imports module.exports = {
+  // solution,
+// } from js1/7
+
 const isPrime = require('../js1/7.js').solution;
 
 const solution = (a) => {
