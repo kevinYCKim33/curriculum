@@ -5,8 +5,6 @@
  */
 
 const solution = (a) => {
-  if (a.length === 0) { return '' }
-  
   return a.reduce((acc, num) => {
     return acc + num;
   }, 0)
