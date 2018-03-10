@@ -3,13 +3,22 @@
  * @returns {[]}
  */
 
-const solution = () => {
-  Array.prototype.gsMap = function () {
-    // To get the actual array, use this
-    return [];
-  };
-};
+ const solution = () => {
+   Array.prototype.gsMap = function (cb, res = []) {
+     if (res.length === this.length) return res;
+     res.push(cb(this[res.length]));
+     return this.gsMap(cb, res);
+   };
+ };
 
-module.exports = {
-  solution,
-};
+ // const solution = () => {
+ //   Array.prototype.gsMap = function (cb) {
+ //     for (let i = 0; i < this.length; i++) {
+ //       this[i] = cb(this[i]);
+ //     }
+ //   }
+ // }
+
+ module.exports = {
+   solution,
+ };
