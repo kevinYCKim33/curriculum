@@ -12,10 +12,7 @@
 const isPrime = require('../js1/7.js').solution;
 
 const solution = (a) => {
-  return a.map((num) => {
-    if (isPrime(num)) { return num }
-    return 1;
-  });
+  return a.map( num => isPrime(num) ? num : 1)
 };
 
 module.exports = {
