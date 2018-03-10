@@ -5,7 +5,7 @@
  */
 
 const solution = (a, i=0, maxNum) => {
-  if (a.length === 0) {return ''};
+  if (a.length === 0) { return 0 };
   if (!maxNum) { maxNum = a[0] };
 
   if (i === a.length) { return maxNum }
